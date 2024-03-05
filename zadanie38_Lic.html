@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zadanie 38</title>
+    <script>
+        function sprawdzParzystosc() {
+            var liczba = prompt("Podaj liczbę:", "");
+            
+            if (liczba % 2 === 0) {
+                document.write('<p style="color:red; font-size:3;">Liczba jest parzysta</p>');
+            } else {
+                document.write('<p style="color:silver; font-size:5;">Liczba jest nieparzysta</p>');
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Sprawdź" onclick="sprawdzParzystosc()" />
+</body>
+</html>
