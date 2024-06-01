@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obliczanie Silni</title>
+</head>
+<body>
+    <h1>Obliczanie Silni</h1>
+    <label for="n_kow">Podaj liczbę n: </label>
+    <input type="number" id="n_kow" min="0">
+    <button onclick="obliczSilnie()">Oblicz Silnię</button>
+    <p id="wynik"></p>
+
+    <script>
+        function obliczSilnie() {
+            let n_kow = parseInt(document.getElementById('n_kow').value);  
+            let silnia_kow;
+
+            
+            if (n_kow === 0) {
+                silnia_kow = 1;
+            } else {
+                silnia_kow = 1;
+                for (let i = 1; i <= n_kow; i++) {
+                    silnia_kow *= i;
+                }
+            }
+
+            
+            document.getElementById('wynik').textContent = n_kow + "! = " + silnia_kow;
+        }
+    </script>
+</body>
+</html>
