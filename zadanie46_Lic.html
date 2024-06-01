@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie46</title>
+</head>
+<body>
+    <h1>Zadanie46</h1>
+    <button onclick="sprawdzDane()">Sprawdź dane</button>
+    <p id="wynik"></p>
+
+    <script>
+        function sprawdzDane() {
+            let a_lic, h_lic;
+
+            
+            do {
+                a_lic = parseFloat(prompt("Podaj podstawę trójkąta (a_lic):"));
+            } while (!(a_lic > 0));
+
+            
+            do {
+                h_lic = parseFloat(prompt("Podaj wysokość trójkąta (h_lic):"));
+            } while (!(h_lic > 0));
+
+            document.getElementById("wynik").textContent = "Podstawa trójkąta (a_lic): " + a_lic + ", Wysokość trójkąta (h_lic): " + h_lic;
+        }
+    </script>
+</body>
+</html>
