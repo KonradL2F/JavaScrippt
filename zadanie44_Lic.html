@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wyświetlanie imienia i nazwiska</title>
+    <style>
+        #wynik {
+            font-size: 43px; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Wyświetlanie imienia i nazwiska</h1>
+    <div id="wynik"></div>
+
+    <script>
+        const nazwisko = "Kowalski"; 
+        const imie = "Jan"; 
+        const liczbaLiterNazwiska = nazwisko.length;
+        const ileRazyWyswietlic = (liczbaLiterNazwiska % 4) + 10;
+        const wielkoscLiter = (liczbaLiterNazwiska % 3) + 40;
+
+       
+        document.getElementById("wynik").style.fontSize = wielkoscLiter + "px";
+
+        
+        function wyswietlImieNazwisko() {
+            let wynik = "";
+            for (let i = 1; i <= ileRazyWyswietlic; i++) {
+                if (i % 2 === 0) {
+                    wynik += imie + " "; 
+                } else {
+                    wynik += nazwisko + " "; 
+                }
+            }
+            document.getElementById("wynik").textContent = wynik;
+        }
+
+        
+        wyswietlImieNazwisko();
+    </script>
+</body>
+</html>
