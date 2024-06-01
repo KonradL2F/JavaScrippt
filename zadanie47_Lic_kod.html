@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie47</title>
+</head>
+<body>
+    <h1>Zadanie47</h1>
+    <button onclick="sprawdzTrojkat()">Sprawdź trójkąt</button>
+    <p id="wynik"></p>
+
+    <script>
+        function sprawdzTrojkat() {
+            let a_kow, b_kow, c_kow;
+
+            
+            do {
+                a_kow = parseFloat(prompt("Podaj pierwszy bok trójkąta (a_kow):"));
+            } while (!(a_kow > 0));
+
+            do {
+                b_kow = parseFloat(prompt("Podaj drugi bok trójkąta (b_kow):"));
+            } while (!(b_kow > 0));
+
+            do {
+                c_kow = parseFloat(prompt("Podaj trzeci bok trójkąta (c_kow):"));
+            } while (!(c_kow > 0));
+
+            
+            if (a_kow + b_kow > c_kow && a_kow + c_kow > b_kow && b_kow + c_kow > a_kow) {
+                document.getElementById("wynik").textContent = "Boki " + a_kow + ", " + b_kow + ", " + c_kow + " tworzą trójkąt.";
+            } else {
+                document.getElementById("wynik").textContent = "Boki " + a_kow + ", " + b_kow + ", " + c_kow + " nie tworzą trójkąta.";
+            }
+        }
+    </script>
+</body>
+</html>
+JAVASCRIPT
+body
+{
+
+ color: blue;
+ font-size: 30px;
+}
+p
+{
+	color: green;
+	font-size: 20px;
+}
