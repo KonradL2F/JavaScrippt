@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kowalski-Zadanie45</title>
+</head>
+<body>
+    <h1>Kowalski-Zadanie45</h1>
+    <button onclick="sprawdzDane()">Sprawdź dane</button>
+    <p id="wynik"></p>
+
+    <script>
+        function sprawdzDane() {
+            let a_kow, h_kow;
+
+            
+            do {
+                a_kow = parseFloat(prompt("Podaj podstawę trójkąta (a_kow):"));
+            } while (!(a_kow > 0));
+
+            
+            do {
+                h_kow = parseFloat(prompt("Podaj wysokość trójkąta (h_kow):"));
+            } while (!(h_kow > 0));
+
+            document.getElementById("wynik").textContent = "Podstawa trójkąta (a_kow): " + a_kow + ", Wysokość trójkąta (h_kow): " + h_kow;
+        }
+    </script>
+</body>
+</html>
+JAVASCRIPT
+body
+{
+
+ color: blue;
+ font-size: 30px;
+}
+p
+{
+	color: green;
+	font-size: 20px;
+}
