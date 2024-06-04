@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Rysowanie prostokąta z gwiazdek</title>
+    <script language="JavaScript">
+        var a_lic = parseInt(prompt("Podaj wysokość prostokąta (a):", ""), 10);
+        var b_lic = parseInt(prompt("Podaj szerokość prostokąta (b):", ""), 10);
+
+
+        if (isNaN(a_lic) || isNaN(b_lic) || a_lic <= 0 || b_lic <= 0) {
+            alert("Niepoprawne wymiary. Proszę odświeżyć stronę i spróbować ponownie.");
+        } else {
+            for (var i = 0; i < b_lic; i++) {
+                document.write("*");
+            }
+            document.write("<br>");
+
+            var wiersz_kow = "*";
+            for (var i = 1; i <= (b_;lic - 2); i++) {
+                wiersz_kow += "&nbsp&nbsp";
+            }
+            wiersz_lic += "*";
+
+            for (var i = 0; i < a_lic - 2; i++) {
+                document.write(wiersz_lic + "<br>");
+            }
+
+            for (var i = 0; i < b_lic; i++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
