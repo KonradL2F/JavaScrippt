@@ -1,0 +1,40 @@
+<<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Zmiana wielkości tekstu</title>
+    <script language="JavaScript">
+        var l1_t_lic = parseInt(prompt("Podaj pierwszą liczbę z przedziału <20,60>:", ), 10);
+        var l2_t_lic = parseInt(prompt("Podaj drugą liczbę z przedziału <20,60>:", ), 10);
+
+        var pocz_lic = parseInt(prompt("Podaj wartość początkową wielkości tekstu (w px):", ), 10);
+        var tekst_lic = prompt("Podaj dowolny tekst:");
+
+        if (isNaN(l1_t_lic) || l1_t_lic < 20 || l1_t_lic > 60) {
+            alert("Liczba l1 nie należy do przedziału <20,60>.");
+        } else if (isNaN(l2_t_lic) || l2_t_lic < 20 || l2_t_lic > 60) {
+            alert("Liczba l2 nie należy do przedziału <20,60>.");
+        } else if (isNaN(pocz_lic)) {
+            alert("Niepoprawna wartość początkowa wielkości tekstu.");
+        } else {
+            var zmiana;
+            if (l1_t_lic < l2_t_lic) {
+                zmiana = 5;
+            } else if (l2_t_lic < l1_t_lic) {
+                zmiana = -5;
+            } else {
+                alert("Liczby l1 i l2 są równe, nie można określić kierunku zmiany wielkości tekstu.");
+                zmiana = 0;
+            }
+
+            var i = pocz_lic;
+            while ((zmiana > 0 && i <= 100) || (zmiana < 0 && i >= 0)) {
+                document.write("<p style=\"font-size:" + i + "px; color: black;\"><br>" + tekst_lic + "<br></p>");
+                i += zmiana;
+            }
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
