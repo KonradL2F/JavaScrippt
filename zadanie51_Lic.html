@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Przykład użycia pętli</title>
+    <script language="JavaScript">
+        var repeatCount = prompt("Ile razy powtórzyć napis?", "10");
+        repeatCount = parseInt(repeatCount, 10);
+        
+        var initials = prompt("Podaj swoje inicjały", "AB");
+
+        if (isNaN(repeatCount) || repeatCount <= 0) {
+            alert("Niepoprawna liczba powtórzeń. Proszę odświeżyć stronę i spróbować ponownie.");
+        } else if (initials.trim() === "") {
+            alert("Niepoprawne inicjały. Proszę odświeżyć stronę i spróbować ponownie.");
+        } else {
+            for (var i = 1; i <= repeatCount; i++) {
+                for (var k = 1; k <= i; k++) {
+                    document.write("&nbsp;");
+                }
+                document.write(i + "_" + initials + "_" + i + "<br>");
+            }
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
