@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Obiekt - Pudełko</title>
+    <script type="text/javascript">
+        var pudelko = {
+            nazwisko: 'Lichaczewski',
+            imie: 'Konrad',
+            zawartosc: 'zabawki',
+            Pudelko_wyswietl_nazwisko: function () {
+                document.write(this.nazwisko + ' ' + this.imie + ' - zawartość: ' + this.zawartosc + '<br>');
+            }
+        };
+
+        pudelko.wiek = 10;
+
+        pudelko.Pudelko_pokaz_nazwisko_ucznia = function () {
+            document.write('Wiek: ' + this.wiek + ' lat<br>');
+        };
+
+        window.onload = function() {
+            pudelko.Pudelko_wyswietl_nazwisko();
+            pudelko.Pudelko_pokaz_nazwisko_ucznia();
+        };
+    </script>
+</head>
+<body>
+    <br>
+    Programowanie obiektowe
+</body>
+</html>
