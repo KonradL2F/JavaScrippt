@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>zadanie32</title>
+    <script type="text/javascript">
+        function Pudelko(nazwisko, imie, zawartosc, kolor) {
+            this.nazwisko = nazwisko;
+            this.imie = imie;
+            this.zawartosc = zawartosc;
+            this.kolor = kolor;
+        }
 
+        Pudelko.prototype.Pudelko_wyswietl_nazwisko = function () {
+            document.write(this.nazwisko + ' ' + this.imie + ' - zawartość: ' + this.zawartosc + ' - kolor: ' + this.kolor + '<br>');
+        };
+
+        var pudelko1 = new Pudelko('Kowalski', 'Jan', 'zabawki', 'niebieski');
+        var pudelko2 = new Pudelko('Nowak', 'Anna', 'klocki', 'czerwony');
+        var pudelko3 = new Pudelko('Wiśniewski', 'Marek', 'książki', 'zielony');
+
+        pudelko1.wiek = 10;
+        pudelko2.wiek = 15;
+        pudelko3.wiek = 20;
+
+        Pudelko.prototype.Pudelko_pokaz_nazwisko_ucznia = function () {
+            document.write('Wiek: ' + this.wiek + ' lat<br>');
+        };
+
+        window.onload = function() {
+            pudelko1.Pudelko_wyswietl_nazwisko();
+            pudelko2.Pudelko_wyswietl_nazwisko();
+            pudelko3.Pudelko_wyswietl_nazwisko();
+
+            pudelko1.Pudelko_pokaz_nazwisko_ucznia();
+            pudelko2.Pudelko_pokaz_nazwisko_ucznia();
+            pudelko3.Pudelko_pokaz_nazwisko_ucznia();
+        };
+    </script>
+</head>
+<body>
+    <br>
+    Programowanie obiektowe
+</body>
+</html>
